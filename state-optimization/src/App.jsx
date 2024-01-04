@@ -1,10 +1,15 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React, { useState } from 'react';
 // function component
 function App() {
 //   This will not increment value in UI but It will increment value in console. To render value in UI we need to rerender ther component . for that we need to use {states}
 //  let counter =0; insted of this we need to use useState hook. In useState we need to provide initial value
+// state is something which is local to the component and whenever change happens ,component gets rerender
+// you can not create state conditionaly like -
+// if (true){
+//   let [counter, setCounter]=useState(0);
+// }
 console.log("component render");
  let [counter, setCounter]=useState(0);
  
