@@ -1,6 +1,7 @@
 
 import './App.css';
 import React, { useState } from 'react';
+import NewsCard from './Components/PropsExample/NewsCard';
 // function component
 function App() {
 //   This will not increment value in UI but It will increment value in console. To render value in UI we need to rerender ther component . for that we need to use {states}
@@ -10,6 +11,23 @@ function App() {
 // if (true){
 //   let [counter, setCounter]=useState(0);
 // }
+const newsArray=[
+  {
+    img:'',
+    title:"laptop",
+    body:"fgbdfhfgjghjg"
+  },
+  {
+    img:'',
+    title:"laptop",
+    body:"fgbdfhfgjghjg"
+  },
+  {
+    img:'',
+    title:"laptop",
+    body:"fgbdfhfgjghjg"
+  }
+]
 console.log("component render");
  let [counter, setCounter]=useState(0);
  
@@ -18,11 +36,16 @@ console.log("component render");
   };
 
   return (
-  //  to use javascript component inside JSX code -use {}
-   <div class="container">
-    <h1>Counter:{counter}</h1>
-    <button className="btn btn-primary" onClick={incrementFunction}>Increment</button>
-   </div>
+    <div class="container">
+  {/* //  to use javascript component inside JSX code -use {}
+  //  <div class="container">
+  //   <h1>Counter:{counter}</h1>
+  //   <button className="btn btn-primary" onClick={incrementFunction}>Increment</button>
+  //  </div> */}
+  <NewsCard news={newsArray[0]}/>
+  <NewsCard news={newsArray[1]}/>
+  {/* <NewsCard name="ABC" age="50"/> */}
+  </div>
   );
 }
 

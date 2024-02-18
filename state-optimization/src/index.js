@@ -11,7 +11,7 @@ root.render(
   <React.StrictMode>
     {/* App is a component in react */}
     <App />
-    <NewsCard/>
+  
   </React.StrictMode>
 );
 
